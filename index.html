@@ -146,6 +146,7 @@
       <a href="#features">기능</a>
       <a href="#quality">품질 시험</a>
       <a href="#download">내려받기</a>
+      <a href="#kongsearch">KongSearch</a>
     </nav>
   </div>
 </header>
@@ -250,6 +251,26 @@
       </div>
     </div>
   </section>
+  <section id="kongsearch">
+    <div class="wrap">
+      <h2>KongSearch</h2>
+      <p>Windows에서 파일명과 HWP·Word·PowerPoint·PDF 문서의 본문을 검색합니다.</p>
+      <p><a class="btn primary" id="kongsearch-download" href="https://github.com/danielyjart-dotcom/kongtools/releases/download/v0.5.13/KongSearch-0.5.13-win64.zip">KongSearch 내려받기</a></p>
+      <p class="meta">Windows 10 · 11 (64비트) · <span id="kongsearch-version">0.5.13</span> · ZIP을 풀고 KongSearch.exe를 실행하세요.</p>
+    </div>
+  </section>
+  <script>
+    fetch('./update.json', {cache: 'no-store'})
+      .then(function (response) { if (!response.ok) throw new Error('Update metadata unavailable'); return response.json(); })
+      .then(function (release) {
+        if (typeof release.version !== 'string' || !/^\d+\.\d+\.\d+$/.test(release.version)) return;
+        var version = release.version;
+        var url = 'https://github.com/danielyjart-dotcom/kongtools/releases/download/v' + version + '/KongSearch-' + version + '-win64.zip';
+        if (release.url !== url) return;
+        document.getElementById('kongsearch-download').href = url;
+        document.getElementById('kongsearch-version').textContent = version;
+      }).catch(function () {});
+  </script>
 </main>
 
 <footer>
