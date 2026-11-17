@@ -1,7 +1,7 @@
 {
-  "version": "0.5.13",
-  "url": "https://github.com/danielyjart-dotcom/kongtools/releases/download/v0.5.13/KongSearch-0.5.13-win64.zip",
-  "sha256": "2d7a795412e4934cd512fd6d2412a3200704ddadf103d79e80854111b9e6cb5d",
-  "size": 6827148,
-  "notes": "본문 검색 일치 위치와 문장 표시, 온라인 전용 파일 건너뛰기"
+  "version": "0.5.14",
+  "url": "https://github.com/danielyjart-dotcom/kongtools/releases/download/v0.5.14/KongSearch-0.5.14-win64.zip",
+  "sha256": "e65d554bb0536e446eb6808659956e15c8385c882f54da70bec4d27f90d2df5f",
+  "size": 6827158,
+  "notes": "Windows GUI로 시작하여 콘솔 창을 표시하지 않습니다."
 }
