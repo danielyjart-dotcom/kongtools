@@ -86,7 +86,7 @@
   .product h2 { font-size: clamp(24px, 3vw, 32px); }
   .product .product-copy { flex: 1; margin: 0 0 20px; }
   .product .actions { justify-content: flex-start; }
-  .product .meta { margin-bottom: 0; }
+  .product .meta { margin-bottom: 0; min-height: 3.3em; }
   #kongpdf, #kongsearch, #kongsee { scroll-margin-top: 20px; }
   @media (max-width: 680px) { .products { grid-template-columns: 1fr; } }
 
@@ -99,6 +99,9 @@
   .search-shots { display: grid; gap: 20px; padding: 26px 0 8px; }
   .search-shots .shot a { display: block; }
   .search-shots .shot a:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+  .shot-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; padding: 28px 0 0; }
+  .shot-pair .shot a { display: block; }
+  .shot-pair .shot a:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
 
   section { padding: 56px 0; }
   section.alt { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
@@ -129,7 +132,7 @@
 
   @media (max-width: 820px) {
     .grid { grid-template-columns: 1fr; }
-    .download, .shots .pair { grid-template-columns: 1fr; }
+    .download, .shots .pair, .shot-pair { grid-template-columns: 1fr; }
     nav { gap: 14px; font-size: 14px; }
     .hero { padding-top: 44px; }
     section { padding: 44px 0; }
@@ -177,7 +180,7 @@
       <article class="product">
         <p class="product-type">파일명·문서 본문 검색</p>
         <h2>콩Search</h2>
-        <p class="product-copy">파일명으로 폴더와 파일을 찾고, 한글·Word·PowerPoint·PDF에서 일치 문장과 위치를 확인합니다.</p>
+        <p class="product-copy">파일명으로 폴더와 파일을 찾고, 한글, Word, PowerPoint, PDF 문서에서 일치 문장과 위치를 확인합니다.</p>
         <div class="actions">
           <a class="btn primary" id="kongsearch-download-top" href="https://github.com/danielyjart-dotcom/kongtools/releases/download/v0.5.14/KongSearch-0.5.14-win64.zip">콩Search 내려받기</a>
           <a class="btn" href="#kongsearch">제품 소개</a>
@@ -187,7 +190,7 @@
       <article class="product">
         <p class="product-type">그림·도면·3D 모델 뷰어</p>
         <h2>콩see</h2>
-        <p class="product-copy">그림, DXF·DWG 도면, STL·OBJ·STEP·IGES 등의 3D 모델을 열어 확대하고 돌려 봅니다. 파일은 읽기만 하고 고치지 않습니다.</p>
+        <p class="product-copy">그림, DXF와 DWG 도면, STL, OBJ, STEP, IGES 등의 3D 모델을 열어 확대하고 돌려 봅니다. 파일은 읽기만 하고 고치지 않습니다.</p>
         <div class="actions">
           <a class="btn primary" id="kongsee-download-top" href="https://github.com/danielyjart-dotcom/kongsee-release/releases/download/v2.0.1/KongSee_Setup_2.0.1.exe">콩see 2.0.1 내려받기</a>
           <a class="btn" href="#kongsee">제품 소개</a>
@@ -309,6 +312,16 @@
         <div class="card"><h3>보기</h3><p>어두운 화면과 밝은 화면, 전체 보기 (F11), 인쇄 (Ctrl+P)를 지원합니다.</p></div>
         <div class="card"><h3>여러 언어</h3><p>한국어, English, 日本語, 中文, Русский, العربية로 쓸 수 있습니다.</p></div>
         <div class="card"><h3>업데이트</h3><p>새 버전이 나오면 알려 주고, 받은 파일의 SHA-256을 확인한 뒤에만 설치합니다.</p></div>
+      </div>
+      <div class="shot-pair">
+        <figure class="shot">
+          <a href="kongsee-2d.webp"><img src="kongsee-2d.webp" width="1350" height="744" alt="콩see에서 DWG 도면을 연 화면. 구멍 네 개와 반원, 기울어진 타원이 있는 판이 창 크기에 맞춰 보인다." loading="lazy"></a>
+          <figcaption><strong>도면</strong> · DWG 도면을 창 크기에 맞춰 열고, 확대하거나 옮겨 봅니다.</figcaption>
+        </figure>
+        <figure class="shot">
+          <a href="kongsee-3d.webp"><img src="kongsee-3d.webp" width="1350" height="744" alt="콩see에서 STEP 3D 모델을 연 화면. 구멍이 뚫린 받침이 모서리선과 함께 보이고, 오른쪽 위에 방향 상자가 있다." loading="lazy"></a>
+          <figcaption><strong>3D 모델</strong> · STEP 모델을 끌어서 돌리고, 방향 상자로 보는 방향을 바꿉니다.</figcaption>
+        </figure>
       </div>
     </div>
   </section>
